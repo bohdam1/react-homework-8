@@ -1,0 +1,89 @@
+.form{
+   
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    gap: 10px;
+    height: 350px;
+    width: 269px;
+    background-color: #26436C;
+    border-radius: 25px;
+    padding: 20px;
+    padding-top: 40px;
+
+   
+   
+}
+.title{
+    text-transform: uppercase;
+    color: #DFD1BB;
+    font-family: "Libre Franklin", sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 0.9;
+    margin-bottom: 33px;
+    
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.labelll{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top: 37px;
+}
+.span {
+    
+    font-family: "Josefin Slab", serif;
+    word-spacing: 6px;
+    font-weight: 400;
+    font-size: 20px;
+    color: #DFD1BB;
+
+}
+  
+.input {
+    background-color: #DFD1BB; /* Синій колір фону */
+    color: #26436C; /* Білий колір тексту */
+    border: 1px solid #DFD1BB; /* Рамка того ж кольору, що й фон */
+    padding: 10px; /* Відступ всередині поля */
+    border-radius: 18px; /* Закруглені кути */
+    font-size: 16px; /* Розмір шрифту */
+    height: 18px;
+    margin-top: 10px;
+    font-family: "Josefin Slab", serif;
+    font-size: 28px;
+    width: 230px;
+}
+.input::placeholder {
+    color: #26436C; /* Білий колір для тексту-заповнювача (placeholder) */
+    opacity: 0.7; /* Трохи прозорий, щоб відрізнявся від тексту */
+    font-family: "Josefin Slab", serif;
+  
+}
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #DFD1BB;
+    color: #26436C;
+    border: 1px solid #DFD1BB;
+    padding: 10px;
+    border-radius: 18px;
+    font-weight: 400;
+    font-size: 20px;
+    height: 31px;
+    width: 90px;
+    margin-top: 45px;
+    font-family: "Josefin Slab", serif;
+    flood-color: #26436C;
+    
+}
+
+  

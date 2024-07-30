@@ -1,0 +1,57 @@
+.join_sectoin{
+    display: flex;
+   width: 1200px;
+  
+}
+.phone_container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    padding-top: 30px;
+}
+.ph_container{
+    display: flex;
+   
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    background-color:  #DFD1BB;
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.img_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+.phonebook{
+    width: 86px;
+    height: 86px;
+}
+.phone{
+    width: 174px;
+    height: 450px; 
+}
+.maine_title{
+    font-family: "Libre Franklin", sans-serif;
+    color: #26436C;
+    font-weight: 500;
+    font-size: 30px;
+    margin: 0;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: 15px;
+}
+.second_title{
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: "Josefin Slab", serif;
+    
+    font-weight: 500;
+    font-size: 20px;
+
+}

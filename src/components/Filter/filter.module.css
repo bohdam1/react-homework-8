@@ -1,0 +1,19 @@
+.input {
+  background-color: #DFD1BB; /* Синій колір фону */
+  color: black; /* Білий колір тексту */
+  border: 1px solid #DFD1BB; /* Рамка того ж кольору, що й фон */
+  padding: 10px; /* Відступ всередині поля */
+  border-radius: 18px; /* Закруглені кути */
+  font-size: 16px; /* Розмір шрифту */
+  height: 28px;
+  
+  font-family: "Josefin Slab", serif;
+  font-size: 18px;
+  
+}
+.input::placeholder {
+  color: white; /* Білий колір для тексту-заповнювача (placeholder) */
+  opacity: 0.7; /* Трохи прозорий, щоб відрізнявся від тексту */
+  font-family: "Josefin Slab", serif;
+
+}
