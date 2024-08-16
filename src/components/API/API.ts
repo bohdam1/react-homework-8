@@ -11,7 +11,7 @@ export const PublickApi = axios.create({
 })
 
 export const token = {
-    set:(token) =>{
+    set:(token:string) =>{
         privateApi.defaults.headers.Authorization = token;
     },
 

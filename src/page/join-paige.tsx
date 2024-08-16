@@ -1,9 +1,9 @@
 
-import { JoinForm } from "components/JoinForm/JoinForm"
+import { JoinForm } from "../components/JoinForm/JoinForm"
 import css from "./Join-page.module.css"
 import img from "./book.jpg"
 import phone from "./15.png"
-import { AuthNav } from "components/AuthNav/AuthNav"
+import { AuthNav } from "../components/AuthNav/AuthNav"
 
 
 export const JoinPage = ()=> {

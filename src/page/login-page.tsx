@@ -1,8 +1,8 @@
-import { LoginForm } from "components/LoginForm/LoginForm"
+import { LoginForm } from "../components/LoginForm/LoginForm"
 import img from "./book.jpg"
 import phone from "./15.png"
 import css from "./login-page.module.css"
-import { AuthNav } from "components/AuthNav/AuthNav"
+import { AuthNav } from "../components/AuthNav/AuthNav"
 export const LoginPage = ()=> {
 
 

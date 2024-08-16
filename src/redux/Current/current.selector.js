@@ -1,1 +1,0 @@
-export const selectCurrent = (state) => state.current.data;

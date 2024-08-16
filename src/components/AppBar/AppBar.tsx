@@ -6,12 +6,13 @@ import {selectCurrent} from "../../redux/Current/current.selector"
 import { useEffect } from "react";
 import { fetchcurrentThunk } from "../../redux/Current/current.thunk";
 import { LogoutThunk } from "../../redux/Auth/auth.thunk"; 
+import {AppDispatch} from "../../redux/store"
 import css from "./Appbar.module.css"
 
 export const AppBar = () => {
     const token = useSelector(selectToken);
     const current = useSelector(selectCurrent);
-    const dispatch = useDispatch();
+    const dispatch:AppDispatch = useDispatch();
   
     useEffect(() => {
       if (token) {

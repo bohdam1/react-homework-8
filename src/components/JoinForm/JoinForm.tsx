@@ -1,33 +1,38 @@
-
 import css from "./JoinForm.module.css";
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import { useNavigate } from "react-router-dom";
-import {PublickApi} from "../API/API";
-const initialState = {
+import { PublickApi } from "../API/API";
+
+const initialState:formState = {
   name: "",
   email: "",
   password: ""
 };
+export interface formState {
+  name: string;
+  email: string;
+  password: string;
+}
 
 export const JoinForm = () => {
   const [formData, setFormData] = useState(initialState);
   
-  const error = () => toast.error("Error !");
+  const error = () => toast.error("Error!");
   const navigate = useNavigate();
 
-  const handleChange = event => {
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setFormData({ ...formData, [event.target.name]: event.target.value });
   };
 
-  const handleSubmit = async event => {
+  const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     try {
       await PublickApi.post('/users/signup', formData);
       setFormData(initialState); 
       navigate('/login', { replace: true });
-      toast.success("Success !")
+      toast.success("Success!");
     } catch (err) {
       console.error("Submission error:", err);
       error();
@@ -42,26 +47,41 @@ export const JoinForm = () => {
           <span className={css.span}>
             Username
           </span>
-          
-          <input className={css.input} type="text" name="name" onChange={handleChange} value={formData.name} />
+          <input 
+            className={css.input} 
+            type="text" 
+            name="name" 
+            onChange={handleChange} 
+            value={formData.name} 
+          />
         </label>
         <label className={css.label}>
-        <span className={css.span}>
+          <span className={css.span}>
             Email
           </span>
-         
-          <input  className={css.input} type="email" name="email" onChange={handleChange} value={formData.email} />
+          <input 
+            className={css.input} 
+            type="email" 
+            name="email" 
+            onChange={handleChange} 
+            value={formData.email} 
+          />
         </label>
         <label className={css.label}>
-        <span className={css.span}>
+          <span className={css.span}>
             Password
           </span>
-         
-          <input className={css.input} type="password" name="password" onChange={handleChange} value={formData.password} />
+          <input 
+            className={css.input} 
+            type="password" 
+            name="password" 
+            onChange={handleChange} 
+            value={formData.password} 
+          />
         </label>
         <button className={css.button} type="submit">Register</button>
       </form>
-      <ToastContainer /> {}
+      <ToastContainer />
     </>
   );
 };

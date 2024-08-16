@@ -7,7 +7,7 @@ import filterReducer from "./Filter/slise";
 
 
 const persistedReducer =  contactsReducer
-
+export type RootState = ReturnType<typeof store.getState>
 export const store = configureStore({
   reducer:{
     contacts: persistedReducer,
@@ -25,3 +25,4 @@ export const store = configureStore({
 });
 
 export const persistor = persistStore (store)
+export type AppDispatch = typeof store.dispatch;

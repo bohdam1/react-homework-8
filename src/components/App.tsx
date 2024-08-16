@@ -1,9 +1,9 @@
 
 // import { LoginPage } from 'page/login-page';
-import { JoinPage } from 'page/join-paige';
+import { JoinPage } from '../page/join-paige';
 import { ContactPage } from '../page/contact-page';
 import { Route, Routes } from 'react-router-dom';
-import { LoginPage } from 'page/login-page';
+import { LoginPage } from '../page/login-page';
 import { Layout } from './layout/layout';
 import {HomeScreen} from "../page/home-page"
 import { PublickeRoute } from './AuthRauth/Publick.rauth';

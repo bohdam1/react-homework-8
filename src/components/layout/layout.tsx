@@ -1,11 +1,11 @@
-import { AppBar } from "components/AppBar/AppBar"
+import { AppBar } from "../AppBar/AppBar"
 import { Suspense  } from "react"
 import { Outlet , useLocation } from 'react-router-dom';
 import css from "./loyout.module.css"
 import {  useSelector } from "react-redux";
 import { selectToken } from "../../redux/Auth/auth.selector";
 
-import { JoinPage } from "page/join-paige";
+import { JoinPage } from "../../page/join-paige";
 
 export const Layout = () => {
   const token = useSelector(selectToken);

@@ -2,27 +2,29 @@ import React, { useEffect } from "react";
 import css from "./contactlist.module.css";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchContactsThunk,deleteContactsThunk} from "../../redux/Contact/thunk"
-import Filter from "components/Filter/Filter"
+import Filter from "../Filter/Filter"
 import png from "./33.png"
+import { RootState } from "../../redux/store";
+import{AppDispatch} from "../../redux/store"
 
 export const ContactsList = () => {
-    const dispatch = useDispatch();
-    const contacts = useSelector((state) => state.contacts.items) || []
+    const dispatch:AppDispatch = useDispatch();
+    const contacts = useSelector((state:RootState) => state.contacts.items) || []
     
-    const filter = useSelector((state) => state.filter.filter); // Отримуємо фільтр з Redux
+    const filter = useSelector((state:RootState) => state.filter.filter); 
    
 
     useEffect(() => {
         dispatch(fetchContactsThunk())
     },[dispatch])
-    // Фільтруємо контакти за значенням фільтра
+    
     const filteredContacts = contacts && contacts.length > 0
     ? contacts.filter(contact =>
         contact.name.toLowerCase().includes(filter.toLowerCase())
     )
     : [];
 
-    const handleDelete = (id) => {
+    const handleDelete = (id:string) => {
         dispatch(deleteContactsThunk(id));
     };
  
